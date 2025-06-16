@@ -1,0 +1,8 @@
+# @package _global_
+
+#### Model params #############################################################
+model:
+  name: icon
+  hparams: {} 
+
+nwp_test_set: True

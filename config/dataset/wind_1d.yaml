@@ -1,0 +1,13 @@
+# @package _global_
+defaults:
+  - wind
+  - _self_
+
+#### Dataset params ###########################################################
+dataset:
+  name: Wind-1d
+
+#### Windowing params #########################################################
+window: 24
+horizon: 24
+stride: 1

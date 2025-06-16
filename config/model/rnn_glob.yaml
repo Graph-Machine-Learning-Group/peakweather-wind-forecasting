@@ -1,0 +1,17 @@
+# @package _global_
+
+#### Model params #############################################################
+model:
+  name: rnn_glob
+  hparams:
+    hidden_size: 128  # 128, 64, 32
+    emb_size: 0  
+    add_embedding_before: ['encoding', 'decoding']
+    use_local_weights: null # ['encoder', 'decoder']
+    time_layers: 2
+    activation: 'elu'
+    noise_mode: 'lin'
+
+dataset:
+  covariates:
+    v: False

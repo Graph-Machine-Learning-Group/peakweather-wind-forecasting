@@ -1,0 +1,9 @@
+# @package _global_
+
+#### Model params #############################################################
+model:
+  name: pers_day
+  hparams: 
+    lag: 24  # for each lead time, take the last observaton at the same hour of the day
+
+window: 24

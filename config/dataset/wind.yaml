@@ -1,0 +1,58 @@
+# @package _global_
+
+#### Dataset params ###########################################################
+dataset:
+  name: Wind
+  hparams:
+    root: ./data/PeakWeather  # MeteoSwiss
+    target_channels: [ "wind_u", "wind_v" ] # [wind_direction, wind_speed, wind_gust]
+    covariate_channels: "other"  # "other", null
+    freq: "h" # "h", null
+    station_type: 'meteo_station'
+  zerowind: 1.0  # wind speed cutoff of 1m/s
+  splitting:
+    first_val_ts: [ 2024, 01, 01 ]
+    first_test_ts: [ 2024, 03, 29 ]
+  connectivity:
+    # method: distance
+    threshold: 0.7
+    theta: null
+    include_self: False
+    knn: 8
+    layout: csr
+  covariates:
+    year: True
+    day: True
+    weekday: False
+    mask: True
+    u_mask: True
+    v: True
+  static_attributes:
+    - latitude
+    - longitude
+#    - swiss_easting
+#    - swiss_northing
+    - station_height
+    - ASPECT_2000M_SIGRATIO1
+    - WE_DERIVATIVE_2000M_SIGRATIO1
+    - TPI_2000M
+    - SN_DERIVATIVE_10000M_SIGRATIO1
+    - dem
+    - SN_DERIVATIVE_2000M_SIGRATIO1
+    - SLOPE_10000M_SIGRATIO1
+    - ASPECT_10000M_SIGRATIO1
+    - SLOPE_2000M_SIGRATIO1
+    - STD_2000M
+    - STD_10000M
+    - TPI_10000M
+    - WE_DERIVATIVE_10000M_SIGRATIO1
+
+#### Windowing params #########################################################
+window: 72
+horizon: 24
+stride: 1
+
+scaler:
+  method: Standard
+  axis: graph
+  scale_target: False

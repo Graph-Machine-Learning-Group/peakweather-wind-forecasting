@@ -1,0 +1,23 @@
+# @package _global_
+
+#### Model params #############################################################
+model:
+  name: tts_imp
+  hparams:
+    hidden_size: 128  # 64, 32
+    emb_size: 32  # 32, 16
+    add_embedding_before: ['encoding', 'decoding']
+    use_local_weights: null # ['encoder', 'decoder']
+    root_weight: True
+    time_layers: 2
+    graph_layers: 6  # 2, 4
+    add_backward: True  # True if adj is asymmetric
+    norm: 'asym'
+    cached: True
+    activation: 'elu'
+    noise_mode: 'lin'
+    time_skip_connect: True
+
+dataset:
+  connectivity:
+    layout: csr
