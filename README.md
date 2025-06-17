@@ -2,7 +2,7 @@
 
 This repository provides the code for replicating the wind forecasting experiments on the recently released [PeakWeather](https://huggingface.co/datasets/MeteoSwiss/PeakWeather) dataset which has been presented in paper
 
-> __PeakWeather: MeteoSwiss Weather Station Measurements for Spatiotemporal Deep Learning__,  
+> __[PeakWeather: MeteoSwiss Weather Station Measurements for Spatiotemporal Deep Learning](https://arxiv.org/abs/2506.13652)__,  
 > _[Daniele Zambon](https://dzambon.github.io)¹, [Michele Cattaneo](https://github.com/MicheleCattaneo)², [Ivan Marisca](https://marshka.github.io)¹, [Jonas Bhend](https://github.com/jonasbhend)², [Daniele Nerini](https://github.com/dnerini)², [Cesare Alippi](https://alippi.faculty.polimi.it/)¹³._   
 > ¹ USI, IDSIA (Lugano, Switzerland), ² MeteoSwiss  (Zurich, Switzerland), ³ PoliMi (Milan, Italy).
 
@@ -69,10 +69,13 @@ experiment using [Hydra](https://hydra.cc/).
 If you use this code in your work, please cite our paper:
 
 ```bibtex
-@article{zambon2025peakweather,
-  title={PeakWeather: MeteoSwiss Weather Station Measurements for Spatiotemporal Deep Learning},
+@misc{zambon2025peakweather,
+  title={PeakWeather: MeteoSwiss Weather Station Measurements for Spatiotemporal Deep Learning}, 
   author={Zambon, Daniele and Cattaneo, Michele and Marisca, Ivan and Bhend, Jonas and Nerini, Daniele and Alippi, Cesare},
   year={2025},
-  journal={Preprint},
+  eprint={2506.13652},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2506.13652}, 
 }
 ```
